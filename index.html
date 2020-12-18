@@ -88,7 +88,7 @@
 		<section id="Hoteltrends" class="wrapper style1 align-center" style="background-color:white">
 			<div class="inner">
 				<h1>Baseline model and Google Trends</h1>
-				<p class="align-left">The baseline model that we use to predict the arrivals is a simple Auto-Regressive model of order 2.</p>
+				<p class="align-left">The baseline model that we use to predict the arrivals is a simple Auto-Regressive model of order 2. To select the lags (features) that interest us, we use a PACF plot (plotted bellow). </p>
 			</div>
 
 		</section>
@@ -97,8 +97,11 @@
 		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" style="background-color:white">
 			<div class="content">
 				<h3>How to select the lags of our base model?</h3>
-				<p><span style="font-size:20px">To select the lags (features) that interest us, we use a PACF plot (plotted on the righ side). PACF is a partial auto-correlation function. Instead of finding correlations of present with lags like ACF, it finds correlation of the residuals (which remains after removing the effects which are already explained by the earlier lag(s)) with the next lag value hence ‘partial’ and not ‘complete’ as we remove already found variations before we find the next correlation. For example, if we are regressing a variable Y on other variables X1, X2, and X3, the partial correlation between Y and X3 is the amount of correlation between Y and X3 that is not explained by their common correlations with X1 and X2.
- </p>
+				<p><span style="font-size:20px">PACF is a partial auto-correlation function. Instead of finding correlations of present with lags like ACF, it finds correlation of the residuals (which remains after removing the effects which are already explained by the earlier lag(s)) with the next lag value hence ‘partial’ and not ‘complete’ as we remove already found variations before we find the next correlation. For example, if we are regressing a variable Y on other variables X1, X2, and X3, the partial correlation between Y and X3 is the amount of correlation between Y and X3 that is not explained by their common correlations with X1 and X2. From the partial autocorrelation function we select some lags that have a big autocorrelation coefficient. We try to select the best lags for the base model (without including the Google trends). The idea is to find the best two lags in order to have a base model that fit well the true data wothout overfitting (that's why we only select two lags). To do so, we look at the mean absolute error (MAE) between the model predictions and the true data. We look at the MAE of all the different models (which have different lags) during three periods : the testing set without the crisis (from 2028/1/1 to 2020/2/1); the crisis only (.from 2020/2/1 to 2020/10/1); the whole testing set(2018/1/1 to 2020/10/1).
+
+Ideally this model will be further improved by adding the Google trends.
+
+To have an idea of how an autoregressive model behave, we first evaluate an AR model with only one lag, firstly with t-1 and then with t-12. This gives us an idea about the influence of these two lags.</p>
 				
 			</div>
 			<div style="width:85%; margin:20px;" class="barchart">
