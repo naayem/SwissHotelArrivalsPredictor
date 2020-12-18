@@ -95,8 +95,9 @@
 		<!-- Three -->
 		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" style="background-color:white">
 			<div class="content">
-				<h3>How common is palm oil in European food products?</h3>
-				<p><span style="font-size:20px">3.43% </span> of food products contain palm oil. </p>
+				<h3>How to select the lags of our base model?</h3>
+				<p><span style="font-size:20px">To select the lags (features) that interest us, we use a PACF plot (plotted on the righ side). PACF is a partial auto-correlation function. Basically instead of finding correlations of present with lags like ACF, it finds correlation of the residuals (which remains after removing the effects which are already explained by the earlier lag(s)) with the next lag value hence ‘partial’ and not ‘complete’ as we remove already found variations before we find the next correlation. For example, if we are regressing a variable Y on other variables X1, X2, and X3, the partial correlation between Y and X3 is the amount of correlation between Y and X3 that is not explained by their common correlations with X1 and X2.
+ </p>
 				<table style="width:100%">
 					<tr>
 						<td colspan="2"><strong>Categories with more than 10% palm oil based products</strong></td>
