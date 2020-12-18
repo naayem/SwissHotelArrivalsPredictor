@@ -65,6 +65,7 @@
 			<div class="content">
 				<h3>How did the arrivals behaved during the covid crisis period?</h3>
 				<p>In the following plot is presented the monthly number of arrivals from 2018 to 2020, during the covid 19 crisis period, in Germany. It is clear that the arrivals drasticly decrease in 2020 during the months of March, April and May. Moreover, as Germany is a neighbor country of Switzerland, it highlights even more the scale of the crisis.</p>
+			
 			</div>
 			<div style="width:85%; margin:20px;" class="barchart">
 				<img style="width:100%" src="images/Germany_Arrivals_Covid_Period.png" alt="" />
@@ -98,32 +99,10 @@
 				<h3>How to select the lags of our base model?</h3>
 				<p><span style="font-size:20px">To select the lags (features) that interest us, we use a PACF plot (plotted on the righ side). PACF is a partial auto-correlation function. Basically instead of finding correlations of present with lags like ACF, it finds correlation of the residuals (which remains after removing the effects which are already explained by the earlier lag(s)) with the next lag value hence ‘partial’ and not ‘complete’ as we remove already found variations before we find the next correlation. For example, if we are regressing a variable Y on other variables X1, X2, and X3, the partial correlation between Y and X3 is the amount of correlation between Y and X3 that is not explained by their common correlations with X1 and X2.
  </p>
-				<table style="width:100%">
-					<tr>
-						<td colspan="2"><strong>Categories with more than 10% palm oil based products</strong></td>
-					</tr>
-					<tr>
-						<td>Breakfasts</td>
-						<td>28%</td>
-					</tr>
-					<tr>
-						<td>Sugary snacks</td>
-						<td>19%</td>
-					</tr>
-					<tr>
-						<td>Baby foods</td>
-						<td>15%</td>
-					</tr>
-					<tr>
-						<td>Salty snacks</td>
-						<td>12%</td>
-					</tr>
-				</table>
-
-
+				
 			</div>
 			<div style="width:85%; margin:20px;" class="barchart">
-				<img style="width:100%; " src="images/palm_oil_per_category.png" alt="" />
+				<img style="width:100%; " src="images/pacf.png" alt="" />
 			</div>
 		</section>
 
