@@ -96,7 +96,7 @@
 		<!-- Three -->
 		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" style="background-color:white">
 			<div class="content">
-				<h3>How to select the lags of our base model?</h3>
+				<h1>How to select the lags of our base model?</h1>
 				<p><span style="font-size:20px">PACF is a partial auto-correlation function. Instead of finding correlations of present with lags like ACF, it finds correlation of the residuals (which remains after removing the effects which are already explained by the earlier lag(s)) with the next lag value hence ‘partial’ and not ‘complete’ as we remove already found variations before we find the next correlation. For example, if we are regressing a variable Y on other variables X1, X2, and X3, the partial correlation between Y and X3 is the amount of correlation between Y and X3 that is not explained by their common correlations with X1 and X2. From the partial autocorrelation function we select some lags that have a big autocorrelation coefficient. We try to select the best lags for the base model (without including the Google trends). The idea is to find the best two lags in order to have a base model that fit well the true data wothout overfitting (that's why we only select two lags). To do so, we look at the mean absolute error (MAE) between the model predictions and the true data. We look at the MAE of all the different models (which have different lags) during three periods : the testing set without the crisis (from 2028/1/1 to 2020/2/1); the crisis only (.from 2020/2/1 to 2020/10/1); the whole testing set(2018/1/1 to 2020/10/1).
 
 Ideally this model will be further improved by adding the Google trends.
@@ -114,33 +114,13 @@ To have an idea of how an autoregressive model behave, we first evaluate an AR m
 			<div class="content">
 				<h3>Which google trends are useful in predicting hotel arrivals in Switzerland?</h3>
 				<p>An analysis on the Trends showed that the most interesting Trends are :
-Hotel
-Travel\Touristic Destination\Switzerland
-Ski in Switzerland
+- Hotel
+- Travel\Touristic Destination\Switzerland
+- Ski in Switzerland
 
 The three best trends were selected based on their p-values. A feature is considered good (i.e. worth using in the model) if it has a low p-value. Indeed, a low p-value means that it has low chances to happen under the null hypothesis. Here, the null Hypothesis would be "the Trends data is not an indicator of the number of hotel nights sold".</p>
 
-				<table style="width:100%">
-					<tr>
-						<td colspan="2"><strong>Swiss companies using the most palm oil</strong></td>
-					</tr>
-					<tr>
-						<td>Lindt</td>
-						<td>21%</td>
-					</tr>
-					<tr>
-						<td>Migros</td>
-						<td>19%</td>
-					</tr>
-					<tr>
-						<td>Nestlé</td>
-						<td>15%</td>
-					</tr>
-					<tr>
-						<td>Coop</td>
-						<td>13%</td>
-					</tr>
-				</table>
+				
 			</div>
 			<div style="width:85%; margin:20px;" class="barchart">
 				<img style="width:100%" src="images/palm_oil_per_brand.png" alt="" />
