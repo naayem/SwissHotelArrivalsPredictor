@@ -138,7 +138,10 @@ To have an idea of how an autoregressive model behave, an AR model with only one
 				<h2>Is it possible to find better trends using web-scraping ?</h2>
 				<p>Before using Trends to improve the model, the right question to ask is : what trends keywords should be used ?
 Trends should reflect what people are interested in before coming to Switzerland for a touristic purpose. Thus, articles about tourism are scraped from the web.
-In information retrieval, TFIDF, short for term frequency–inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. This method was used to produce a list of trends keywords. This list of keywords served as a proposition to choose the right features.
+In information retrieval, TFIDF, short for term frequency–inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. This method was used to produce a list of trends keywords. 
+					</p>
+						<p>
+					This list of keywords served as a proposition to choose the right features.
 
 A list of relevant keywords is chosen following some tests. To get the Google Trends by country more relevantly we translate them into respective majority language. Some keywords are relevant rather in some countries than others. Summing these Trends and plotting them allows us to follow the interest in swiss tourism through the years.
 </p>
@@ -153,7 +156,8 @@ A list of relevant keywords is chosen following some tests. To get the Google Tr
 				<p>Trends related to hotel reservation improved the quality of the model and thus build a strong long-term model to predict hotel-stays in Switzerland. However, in the context of the corona crisis, it might be useful to include covid-related trends.
 
 Feature engineering techniques showed that the most significant keyword is simply ‘covid19’. However, after including it to the model, the MAE improvement was 28% compared to the base model. Compared to the 28% improvement with only hotel-related Trends, this does not bring any improvement.
-
+</p>
+	<p>
 It can be explained by two main reasons :
 The ‘covid19’ interest rose in a violent spike going from minimum to maximum in the span of two month. This sharp change does not bring much valuable information compared to the long-term tendency of hotel-trends
 Covid is a new trend and there are only a few months to train on. There is a lack of data
