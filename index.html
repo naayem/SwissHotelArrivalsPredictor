@@ -27,9 +27,9 @@
 				<p class="major">The project goal is to show how google trends can improve the predictions of a model initialy based on features monthly released. The idea is to point out how more recent datasets in time can be useful in better predicting near-future events; especially unusual events such as crisis. During our project, we will try to answer the following questions:</p>
 				<ul style="list-style-type:disc">
 					<li><a href="#dataset">What does the DataSet look like?</a></li>
-					<li><a href="#Hoteltrends">Which google trends are useful in predicting hotel arrivals in Switzerland?</a></li>
-					<li><a href="#sugar">Is it possible find better Trends using web scraping?</a></li>
-					<li><a href="#additives">Is it possible to improve the modelisation furthermore, by using Covid19 related Trends?</a></li>
+					<li><a href="#Hotel">Which google trends are useful in predicting hotel arrivals in Switzerland?</a></li>
+					<li><a href="#web">Is it possible find better Trends using web scraping?</a></li>
+					<li><a href="#covid">Is it possible to improve the modelisation furthermore, by using Covid19 related Trends?</a></li>
 
 				</ul>
 				<ul class="actions stacked">
@@ -53,7 +53,7 @@
 		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" style="background-color:white">
 			<div class="content">
 				<h3>From which countries Switzerland hotel visitors originate from?</h3>
-				<p><span style="font-size:20px">Here are the Top 10 arrivals in Switzerland hotels per country during the year 2018. It is observed that most of the arrivals from Europe come from neigboring countries. Regarding the rest of the world, the most arrivals originate from: the United States of America, China, South Korea and India. This gives a good indicator on where (which country) and in which language the Google Trends must be chosen. However, it is notable to obsevre that China must be discarded as Google is not used in this country</p>
+				<p>Here are the Top 10 arrivals in Switzerland hotels per country during the year 2018. It is observed that most of the arrivals from Europe come from neigboring countries. Regarding the rest of the world, the most arrivals originate from: the United States of America, China, South Korea and India. This gives a good indicator on where (which country) and in which language the Google Trends must be chosen. However, it is notable to obsevre that China must be discarded as Google is not used in this country</p>
 		
 			</div>
 			<div style="width:85%; margin:20px;" class="barchart">
@@ -110,7 +110,7 @@ To have an idea of how an autoregressive model behave, we first evaluate an AR m
 		</section>
 
 		<!-- Four -->
-		<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" style="background-color:white">
+		<section id="#Hotel" class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" style="background-color:white">
 			<div class="content">
 				<h3>Which google trends are useful in predicting hotel arrivals in Switzerland?</h3>
 				<p>An analysis on the Trends showed that the most interesting Trends are :
@@ -129,7 +129,7 @@ The three best trends were selected based on their p-values. A feature is consid
 
 		
 		<!-- Four -->
-		<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+		<section id="#web" class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 			<div class="content">
 				<h2>Is it possible to find better trends using web-scraping ?</h2>
 				<p>Before using Trends to improve the model, the right question to ask is : what trends keywords should be used ?
@@ -143,7 +143,7 @@ A list of relevant keywords is chosen following some tests. To get the Google Tr
 
 
 		<!-- Four -->
-		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+		<section id="#covid" class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 			<div class="content" align="justify">
 				<h3>Is it possible to use covid-related Trends ?</h3>
 				<p>Trends related to hotel reservation improved the quality of the model and thus build a strong long-term model to predict hotel-stays in Switzerland. However, in the context of the corona crisis, it might be useful to include covid-related trends.
