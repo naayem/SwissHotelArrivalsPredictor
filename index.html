@@ -113,32 +113,21 @@ To have an idea of how an autoregressive model behave, we first evaluate an AR m
 		<section id="#Hotel" class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" style="background-color:white">
 			<div class="content">
 				<h3>Which google trends are useful in predicting hotel arrivals in Switzerland?</h3>
-				<p>An analysis on the Trends showed that the most interesting Trends are :
-- Hotel
-- Travel\Touristic Destination\Switzerland
-- Ski in Switzerland
+				<p>An analysis on the Trends showed that the most interesting Trends are :<p>
+				
+<p class="align-left"- Hotel</p>
+<p class="align-left"- Travel\Touristic Destination\Switzerland</p>
+<p class="align-left"- Ski in Switzerland</p>
 
-The three best trends were selected based on their p-values. A feature is considered good (i.e. worth using in the model) if it has a low p-value. Indeed, a low p-value means that it has low chances to happen under the null hypothesis. Here, the null Hypothesis would be "the Trends data is not an indicator of the number of hotel nights sold".</p>
+<p>The three best trends were selected based on their p-values. A feature is considered good (i.e. worth using in the model) if it has a low p-value. Indeed, a low p-value means that it has low chances to happen under the null hypothesis. Here, the null Hypothesis would be "the Trends data is not an indicator of the number of hotel nights sold".</p>
 
 				
 			</div>
 			<div style="width:85%; margin:20px;" class="barchart">
-				<img style="width:100%" src="images/palm_oil_per_brand.png" alt="" />
+				<img style="width:100%" src="images/Trends.png" alt="" />
 			</div>
 		</section>
 
-		<!-- Three -->
-		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in" style="background-color:white">
-			<div class="content">
-				<h3>Performance of the model with Hotel Trends</h3>
-				<p>The model is improved by the Hotel Trends. The MAE improvement is 28%. It especially helps to predict hotel stays during the corona crisis in a more dynamic manner.</p>
-				
-			</div>
-			<div style="width:85%; margin:20px;" class="barchart">
-				<img style="width:100%; " src="parcf.png" alt="" />
-			</div>
-		</section>
-		
 		
 		<!-- Four -->
 		<section id="#web" class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
@@ -146,8 +135,7 @@ The three best trends were selected based on their p-values. A feature is consid
 				<h2>Is it possible to find better trends using web-scraping ?</h2>
 				<p>Before using Trends to improve the model, the right question to ask is : what trends keywords should be used ?
 Trends should reflect what people are interested in before coming to Switzerland for a touristic purpose. Thus, articles about tourism are scraped from the web.
-In information retrieval, TFIDF, short for term frequency–inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. This method was used to produce a list of trends keywords.</p>
-				<p>This list of keywords served as a proposition to choose the right features.
+In information retrieval, TFIDF, short for term frequency–inverse document frequency, is a numerical statistic that is intended to reflect how important a word is to a document in a collection or corpus. This method was used to produce a list of trends keywords. This list of keywords served as a proposition to choose the right features.
 
 A list of relevant keywords is chosen following some tests. To get the Google Trends by country more relevantly we translate them into respective majority language. Some keywords are relevant rather in some countries than others. Summing these Trends and plotting them allows us to follow the interest in swiss tourism through the years.
 </p>
@@ -162,16 +150,15 @@ A list of relevant keywords is chosen following some tests. To get the Google Tr
 				<p>Trends related to hotel reservation improved the quality of the model and thus build a strong long-term model to predict hotel-stays in Switzerland. However, in the context of the corona crisis, it might be useful to include covid-related trends.
 
 Feature engineering techniques showed that the most significant keyword is simply ‘covid19’. However, after including it to the model, the MAE improvement was 28% compared to the base model. Compared to the 28% improvement with only hotel-related Trends, this does not bring any improvement.
-</p>
 
-				<p>It can be explained by two main reasons :
+It can be explained by two main reasons :
 The ‘covid19’ interest rose in a violent spike going from minimum to maximum in the span of two month. This sharp change does not bring much valuable information compared to the long-term tendency of hotel-trends
 Covid is a new trend and there are only a few months to train on. There is a lack of data
 
 This project must lead to answers to these questions
 Which google trends are useful in predicting hotel arrivals in Switzerland ?
 Will google trends make more accurate predictions in the context of the COVID-19 crisis than the official statistics of the Switzerland Federal Office of Statistics (which are monthly released)?
-</p></p>
+</p>
 				
 		</section>
 
@@ -181,7 +168,9 @@ Will google trends make more accurate predictions in the context of the COVID-19
 		<section id="sugar" class="wrapper style1 align-center" style="background-color:white">
 			<div class="inner">
 				<h3>Conclusion</h3>
-				<p class="align-left">In conclusion, the prediction of hotel arrivals can be greatly improved with the inclusion of Google Trends data. The choice of keywords is crucial to the performance of these predictions. Many selection methods are available. The use of web scraping and TFIDF allows us to reveal intuitive and insightful keywords. Using a simple auto-regression prediction method, we obtained powerful results of 28% improvement in comparison with the base model.</p>
+				<p class="align-left">It's interesting to see how differently the US and France are concerning additives. Despite France having a larger variety of additives in the dataset, very few dangerous ones appear in French food.</p>
+				<p class="align-left">Looking at the difference between additives available in France and the US, we found that several of these absences could be explained by the fact that France has stricter regulations on additives. HHowever, these additives
+					allowed in the US ut not France are only present in 0.4% of products</p>
 			</div>
 
 		</section>
